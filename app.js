@@ -17,7 +17,7 @@ sequelize
     .then(() => {
         console.log("Database authenticated");
         app.listen(port, () => {
-            console.log("Rodando aqui...")
+            console.log("Running...")
         });
     })
     .catch((error) => {
