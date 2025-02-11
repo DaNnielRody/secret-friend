@@ -1,5 +1,5 @@
 import express from "express";
-import sequelize from "./src/db/db";
+import sequelize from "./src/db/db.js";
 import friendRoute from './src/routes/friendRoute.js'
 
 const app = express();
