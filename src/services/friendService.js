@@ -1,3 +1,9 @@
+import FriendModel from "../model/friend.js";
+
+export const createFriend = async (friend) => {
+    return await FriendModel.createFriend(friend);
+}
+
 export const shuffleFriends = (friends) => {
 
     if (!Array.isArray(friends)) {
@@ -7,7 +13,7 @@ export const shuffleFriends = (friends) => {
     const shuffle = [...friends];
 
     for (let i = shuffle.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
+        const j = Math.floor(Math.random() * (i + 1));
         [shuffle[i], shuffle[j]] = [shuffle[j], shuffle[i]];
     }
 

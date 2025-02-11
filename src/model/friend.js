@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../db/db";
+import sequelize from "../db/db.js";
 
 const Friend = sequelize.define('Friend', {
     name: {
@@ -19,9 +19,7 @@ class FriendModel {
 
     static async createFriend(friend) {
         const createdFriend = await Friend.create(friend);
-        return {
-            name: createdFriend.name
-        }
+        return createdFriend;
     }
 
     static async updateFriend(id, friend) {
@@ -46,7 +44,4 @@ class FriendModel {
     }
 }
 
-export default {
-    Friend,
-    FriendModel
-};
+export default FriendModel;

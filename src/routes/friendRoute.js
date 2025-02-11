@@ -1,8 +1,10 @@
 import express from 'express';
-import generateSecretFriends from '../controllers/friendController.js'
+import { createFriends, generateSecretFriends } from '../controllers/friendController.js'
+
 
 const router = express.Router();
 
-router.get('/shuffle', generateSecretFriends)
+router.post('/shuffle', generateSecretFriends);
+router.post('/create', createFriends);
 
 export default router;
